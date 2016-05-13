@@ -3,7 +3,7 @@
 from django.views import generic
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
-from member.models import Client, Member
+from member.models import Client, Member, Note
 
 
 class ClientList(generic.ListView):
@@ -297,3 +297,10 @@ class ClientPreferencesUpdate(generic.UpdateView):
         context['myVariableOfContext'] = 0
 
         return context
+
+
+class NoteList(generic.ListView):
+    # Display the list of clients
+    model = Note
+    template_name = 'notes/list.html'
+    context_object_name = 'notes'

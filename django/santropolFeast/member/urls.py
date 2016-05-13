@@ -7,4 +7,6 @@ urlpatterns = patterns(
     '',
     url(_(r'^list/$'),
         ClientList.as_view(), name='list'),
+    url(_(r'^notes/$'),
+        NoteList.as_view(), name='notes'),
 )
