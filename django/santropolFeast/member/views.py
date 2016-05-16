@@ -308,6 +308,7 @@ class NoteList(generic.ListView):
     template_name = 'notes/list.html'
     context_object_name = 'notes'
 
+
 def mark_as_read(request, id):
     note = get_object_or_404(Note, pk=id)
     note.mark_as_read()
