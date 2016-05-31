@@ -1,6 +1,12 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
+SIZE_CHOICES = (
+    ('', _('Serving size')),
+    ('R', _('Regular')),
+    ('L', _('Large')),
+)
+
 ORDER_STATUS_CHOICES = (
     (_('Ordered'), 1),
     (_('Delivered'), 2),
@@ -13,6 +19,14 @@ ORDERITEM_TYPE_CHOICES = (
     (_('Regular'), 2),
     (_('Double'), 3),
 )
+
+# REGULAR = 'R'
+# LARGE = 'L'
+
+# SIZE = (
+#     (REGULAR, _('Regular')),
+#     (LARGE, _('Large')),
+# )
 
 
 class Order(models.Model):
@@ -63,3 +77,9 @@ class OrderItem(models.Model):
         decimal_places=2,
         verbose_name=_('price')
     )
+
+    # size = models.CharField(
+    #     max_length=1,
+    #     choices=SIZE,
+    #     default=REGULAR
+    # )
