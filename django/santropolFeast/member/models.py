@@ -219,7 +219,7 @@ class Client(models.Model):
 
     emergency_contact_relationship = models.CharField(
         max_length=100,
-        verbose_name=_('emergency contact relationship')
+        verbose_name=_('emergency contact relationship'),
         blank=True,
         null=True,
     )
@@ -274,11 +274,11 @@ class Client(models.Model):
         return "{} {}".format(self.member.firstname, self.member.lastname)
 
 
-class ClientFilter(django_filters.FilterSet):
-    member__lastname = django_filters.CharFilter(lookup_expr='icontains')
+# class ClientFilter(django_filters.FilterSet):
+#     member__lastname = django_filters.CharFilter(lookup_expr='icontains')
 
-    class Meta:
-        model = Client
+#     class Meta:
+#         model = Client
 
 
 class Referencing (models.Model):

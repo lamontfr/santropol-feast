@@ -71,12 +71,12 @@ class Component(models.Model):
 class Component_ingredient(models.Model):
     component = models.ForeignKey(
         'meal.Component',
-        verbose_name=_('component')
+        verbose_name=_('component'),
         related_name='+')
 
     ingredient = models.ForeignKey(
         'meal.Ingredient',
-        verbose_name=_('ingredient')
+        verbose_name=_('ingredient'),
         related_name='+')
 
     def __str__(self):
@@ -120,12 +120,12 @@ class Restricted_item(models.Model):
 class Incompatibility(models.Model):
     restricted_item = models.ForeignKey(
         'meal.Restricted_item',
-        verbose_name=_('restricted item')
+        verbose_name=_('restricted item'),
         related_name='+')
 
     ingredient = models.ForeignKey(
         'meal.Ingredient',
-        verbose_name=_('ingredient')
+        verbose_name=_('ingredient'),
         related_name='+')
 
     def __str__(self):
@@ -148,17 +148,18 @@ class Menu(models.Model):
 class Menu_component(models.Model):
     menu = models.ForeignKey(
         'meal.Menu',
-        verbose_name=_('menu')
+        verbose_name=_('menu'),
         related_name='+')
 
     component = models.ForeignKey(
         'meal.Component',
-        verbose_name=_('component')
+        verbose_name=_('component'),
         related_name='+')
 
     def __str__(self):
         return "On {} <, menu includes> {}".format(str(self.menu.date),
                                                    self.component.name)
+
 
 class Option(models.Model):
 
