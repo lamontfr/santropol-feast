@@ -1,7 +1,7 @@
 # coding=utf-8
 
 import factory
-from meal.model import Meal, Ingredient, Allergy
+from meal.model import Component, Ingredient, Restricted_item
 
 
 class MealFactory(factory.DjangoModelFactory):
