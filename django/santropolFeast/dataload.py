@@ -240,51 +240,51 @@ def insert_all():
     print_all_cols(db.query(Component.sa))
     print_rows(Component.objects)
 
-    # -----------------------------------------------------------------------------
-    men_1 = Menu(
-        date=datetime.date(2016, 7, 15))
-    men_1.save()
-    men_2 = Menu(
-        date=datetime.date(2016, 7, 16))
-    men_2.save()
-    men_3 = Menu(
-        date=datetime.date(2016, 5, 21))
-    men_3.save()
-    men_4 = Menu(
-        date=datetime.date(2016, 5, 28))
-    men_4.save()
-    #
-    print_all_cols(db.query(Menu.sa))
-    print_rows(Menu.objects)
+    # # -----------------------------------------------------------------------------
+    # men_1 = Menu(
+    #     date=datetime.date(2016, 7, 15))
+    # men_1.save()
+    # men_2 = Menu(
+    #     date=datetime.date(2016, 7, 16))
+    # men_2.save()
+    # men_3 = Menu(
+    #     date=datetime.date(2016, 5, 21))
+    # men_3.save()
+    # men_4 = Menu(
+    #     date=datetime.date(2016, 5, 28))
+    # men_4.save()
+    # #
+    # print_all_cols(db.query(Menu.sa))
+    # print_rows(Menu.objects)
 
-    # -----------------------------------------------------------------------------
-    men_com_1 = Menu_component(
-        menu=men_1, component=com_6)
-    men_com_1.save()
-    men_com_2 = Menu_component(
-        menu=men_1, component=com_10)
-    men_com_2.save()
-    men_com_3 = Menu_component(
-        menu=men_1, component=com_11)
-    men_com_3.save()
-    men_com_3 = Menu_component(
-        menu=men_1, component=com_12)
-    men_com_3.save()
-    men_com_4 = Menu_component(
-        menu=men_1, component=com_8)
-    men_com_4.save()
-    men_com_5 = Menu_component(
-        menu=men_1, component=com_9)
-    men_com_5.save()
-    men_com_6 = Menu_component(
-        menu=men_3, component=com_6)
-    men_com_6.save()
-    men_com_7 = Menu_component(
-        menu=men_4, component=com_7)
-    men_com_7.save()
-    #
-    print_all_cols(db.query(Menu_component.sa))
-    print_rows(Menu_component.objects)
+    # # -----------------------------------------------------------------------------
+    # men_com_1 = Menu_component(
+    #     menu=men_1, component=com_6)
+    # men_com_1.save()
+    # men_com_2 = Menu_component(
+    #     menu=men_1, component=com_10)
+    # men_com_2.save()
+    # men_com_3 = Menu_component(
+    #     menu=men_1, component=com_11)
+    # men_com_3.save()
+    # men_com_3 = Menu_component(
+    #     menu=men_1, component=com_12)
+    # men_com_3.save()
+    # men_com_4 = Menu_component(
+    #     menu=men_1, component=com_8)
+    # men_com_4.save()
+    # men_com_5 = Menu_component(
+    #     menu=men_1, component=com_9)
+    # men_com_5.save()
+    # men_com_6 = Menu_component(
+    #     menu=men_3, component=com_6)
+    # men_com_6.save()
+    # men_com_7 = Menu_component(
+    #     menu=men_4, component=com_7)
+    # men_com_7.save()
+    # #
+    # print_all_cols(db.query(Menu_component.sa))
+    # print_rows(Menu_component.objects)
 
     # -----------------------------------------------------------------------------
     # side_dishes = \
