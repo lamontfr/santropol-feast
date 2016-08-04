@@ -287,39 +287,39 @@ def insert_all():
     print_rows(Menu_component.objects)
 
     # -----------------------------------------------------------------------------
-    side_dishes = \
-        ['Green Salad', 'Fruit Salad', 'Day s Dessert',
-         'Day s Diabetic Dessert', 'Day s Pudding', 'Day s Compote']
-    Menu.create_menu_and_components(
-        datetime.date(2016, 5, 21), ['Ginger pork'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 1), ['Ginger pork'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 2), ['Beef Meatloaf'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 3), ['Coq au vin'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 4), ['Meat pie'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 5), ['Vegetable fried rice'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 6), ['Sausage cassoulet'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 7), ['Fish chowder'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 8), ['Ginger pork'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 9), ['Beef Meatloaf'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 10), ['Coq au vin'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 11), ['Meat pie'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 12), ['Vegetable fried rice'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 13), ['Sausage cassoulet'] + side_dishes)
-    Menu.create_menu_and_components(
-        datetime.date(2016, 8, 14), ['Fish chowder'] + side_dishes)
+    # side_dishes = \
+    #     ['Green Salad', 'Fruit Salad', 'Day s Dessert',
+    #      'Day s Diabetic Dessert', 'Day s Pudding', 'Day s Compote']
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 5, 21), ['Ginger pork'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 1), ['Ginger pork'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 2), ['Beef Meatloaf'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 3), ['Coq au vin'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 4), ['Meat pie'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 5), ['Vegetable fried rice'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 6), ['Sausage cassoulet'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 7), ['Fish chowder'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 8), ['Ginger pork'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 9), ['Beef Meatloaf'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 10), ['Coq au vin'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 11), ['Meat pie'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 12), ['Vegetable fried rice'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 13), ['Sausage cassoulet'] + side_dishes)
+    # Menu.create_menu_and_components(
+    #     datetime.date(2016, 8, 14), ['Fish chowder'] + side_dishes)
     #
 
     # -----------------------------------------------------------------------------
