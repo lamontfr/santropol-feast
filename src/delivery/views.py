@@ -491,11 +491,7 @@ class DeliveryRouteSheet(generic.View):
         date = datetime.date.today()
 
         route = Route.objects.get(id=route_id)
-        route_client_ids = route.get_client_sequence(date)
-        # print("delivery route sheet", "route_client_ids", route_client_ids)
         route_list = Order.get_delivery_list(date, route_id)
-        route_list = sort_sequence_ids(route_list, route_client_ids)
-        # TODO sort route_list using sequence from leaflet
         summary_lines, detail_lines = drs_make_lines(route_list, date)
         return render(request, 'route_sheet.html',
                       {'route': route,
@@ -547,28 +543,6 @@ def drs_make_lines(route_list, date):
         key=component_group_sorting)
     # print("values after sort", summary_lines_sorted)
     return summary_lines_sorted, list(route_list.values())
-
-
-def sort_sequence_ids(dic, seq):
-    # sort items in dictionary according to sequence of keys
-    # dic : dictionary for which some keys are not items in sequence
-    # seq : list of keys that may not all be entries in dic
-
-    # build an ordered dictionary from seq skipping keys not in dic
-    od = collections.OrderedDict()
-    if seq:
-        for k in seq:
-            if dic.get(k):
-                od[k] = None
-    # place all values in dic into ordered dict;
-    #   keys not in seq will be at the end.
-    for k, val in dic.items():
-        od[k] = val
-    # print("sort_sequence_ids",
-    #       "dic.items()", dic.items(),
-    #       "seq", seq,
-    #       "od.items()", od.items())
-    return od
 
 # END Delivery route sheet view, helper classes and functions
 
