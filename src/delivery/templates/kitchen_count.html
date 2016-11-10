@@ -62,20 +62,18 @@
   </thead>
   <tbody>
     {% for obj in meal_lines %}
-      <tr{% if obj.client == "" and obj.ingr_clash == "" %} class="active"{% endif %}>
-        {% if not obj.span %}
-            <td><strong>{{obj.ingr_clash}}</strong></td>
-        {% elif obj.span == "-1" %}
-        {% else %}
-            <td rowspan={{obj.span}}><strong>{{obj.ingr_clash}}</strong></td>
-        {% endif %}
-        <td class="center aligned">{{obj.rqty}}</td>
-        <td class="center aligned">{{obj.lqty}}</td>
-        <td>{{obj.client}}</td>
-        <td>{{obj.preparation}}</td>
-        <td>{% if obj.rest_ingr %} {{obj.rest_ingr}}; {% endif %}
-            <strong>{{obj.rest_item}}</strong></td>
-      </tr>
+        <tr{% if obj.client == "" and obj.ingr_clash == "" %} class="active"{% endif %}>
+          {% if not obj.span %}
+              <td><strong>{{obj.ingr_clash}}</strong></td>
+          {% elif obj.span != "-1" %}
+              <th rowspan={{obj.span}}>{% firstof obj.ingr_clash "&nbsp;" %}</th>
+          {% endif %}
+          <td class="center aligned">{% firstof obj.rqty "&nbsp;" %}</td>
+          <td class="center aligned">{% firstof obj.lqty "&nbsp;" %}</td>
+          <td>{% firstof obj.client "&nbsp;" %}</td>
+          <td>{% firstof obj.preparation "&nbsp;" %}</td>
+          <td>{{obj.rest_ingr}} <strong>{% firstof obj.rest_item "&nbsp;" %}</strong></td>
+        </tr>
     {% endfor %}
   </tbody>
 </table>
